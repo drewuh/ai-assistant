@@ -205,3 +205,13 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Node / frontend
+node_modules/
+
+# Environment files — .env already listed above; add wildcard and un-ignore example
+.env.*
+!.env.example
+
+# Claude Code local settings
+.claude/settings.local.json
