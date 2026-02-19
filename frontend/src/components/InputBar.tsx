@@ -21,9 +21,7 @@ export const InputBar = forwardRef<InputBarHandle, InputBarProps>(function Input
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   useImperativeHandle(ref, () => ({
-    // setTimeout defers the focus call to after React's current render cycle,
-    // ensuring the textarea is no longer disabled before we attempt to focus it.
-    focus: () => setTimeout(() => textareaRef.current?.focus(), 0),
+    focus: () => textareaRef.current?.focus(),
   }))
 
   const adjustHeight = useCallback(() => {
