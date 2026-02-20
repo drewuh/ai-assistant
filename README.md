@@ -10,10 +10,7 @@ A full-stack AI chat assistant built with React, FastAPI, and OpenRouter — dev
 
 ---
 
-<!-- TODO: Replace this block with a demo.gif showing a streaming response.
-     Capture with QuickTime → File > New Screen Recording, then convert:
-     ffmpeg -i demo.mov -vf "fps=15,scale=900:-1" -loop 0 demo.gif
-     Aim for < 3 MB. Show: typing a prompt, hitting send, tokens streaming in. -->
+![Lumen demo](./lumen_demo.gif)
 
 ---
 
