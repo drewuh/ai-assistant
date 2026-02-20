@@ -16,6 +16,10 @@ export function ChatPage(): React.JSX.Element {
   // useEffect runs after React commits the DOM, so disabled={false} is already
   // applied to the textarea before we call focus() — unlike setTimeout(0) which
   // races against React's commit and fires while the textarea is still disabled.
+  useEffect(() => {
+    inputBarRef.current?.focus()
+  }, [])
+
   const prevIsStreamingRef = useRef(false)
   useEffect(() => {
     if (prevIsStreamingRef.current && !isStreaming) {
