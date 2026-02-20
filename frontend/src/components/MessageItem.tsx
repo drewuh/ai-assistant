@@ -1,3 +1,5 @@
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import type { Message } from '../types'
 import { StreamingCursor } from './StreamingCursor'
 
@@ -29,8 +31,8 @@ export function MessageItem({ message, isStreaming }: MessageItemProps): React.J
 
   return (
     <div className="flex justify-start">
-      <div className="max-w-[80%] text-zinc-100 text-sm leading-relaxed whitespace-pre-wrap">
-        {message.content}
+      <div className="max-w-[80%] prose prose-invert prose-sm">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{message.content}</ReactMarkdown>
         {isStreaming && <StreamingCursor />}
       </div>
     </div>
